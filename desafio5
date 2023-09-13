@@ -1,1 +1,35 @@
+# Criação da classe produto com seus respectivos atributos
+class Produto:
+  def __init__(self, nome, preço) -> None:
+    self.nome = nome
+    self.preço = preço
 
+# Criação da calsse Carrinho de Compras com suas devidas funções
+class CarrinhoDeCompras():
+  def __init__(self) -> None:
+    self.produtos = list()
+
+  def comprando(self, produto):
+    self.produtos.append(produto)
+
+  def valor_sacola(self):
+    tot = 0
+    for produto in self.produtos:
+      tot += produto.preco
+    return tot
+  
+  def listar_compras(self):
+    for produto in self.produtos:
+      print(f'{produto}')
+
+
+# Criação do objeto da classe produto com nome e preço
+arroz = Produto('Arroz', 12.98)
+
+# Instanciando a sacola que recebe o carrinho
+sacola = CarrinhoDeCompras()
+# Adicionando o produto a sacola
+sacola.comprando(arroz)
+
+# listando a sacola
+sacola.listar_compras()
