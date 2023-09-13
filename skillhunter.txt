@@ -1,0 +1,26 @@
+# Criação da classe e definição dos atributos
+class Carro:
+  def __init__(self, marca, modelo, ano):
+    self.marca = marca
+    self.modelo = modelo
+    self.ano = ano
+
+# Método solicitado para apresentação do veículo
+  
+  def apresentar_carro(self):
+    return f'''Modelo: {self.modelo}
+              Marca: {self.marca}
+              Ano: {self.ano}'''
+
+# Método de representação do objeto criado
+  def __repr__(self) -> str:
+    return f'O veículo é um {self.modelo} de marca {self.marca} e ano {self.ano}'
+
+# Criação da variável amarok, instanciando a classe Carro
+amarok = Carro('Volkswagen', 'Amarok', 2015)
+
+# Apresentação do veículo através de método
+amarok.apresentar_carro()
+
+# Chamando a representação do veículo
+print(amarok)
